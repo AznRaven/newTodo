@@ -28,4 +28,4 @@ The "Todo Table" is a simple React application that allows users to manage and d
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/todo-table.git
+   git clone https://github.com/AznRaven/newTodo.git
