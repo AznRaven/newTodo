@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Todo Table
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The "Todo Table" is a simple React application that allows users to manage and display a list of tasks (todos) in both a list view and a table view. Key features of this application include adding new tasks, marking tasks as completed, and filtering tasks based on completion status. The application uses various React concepts such as `useState`, `useEffect`, and `localStorage` for data persistence.
 
-In the project directory, you can run:
+![Todo Table Screenshot](screenshot.png)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Add new tasks to the todo list.
+- Mark tasks as completed by checking checkboxes.
+- Delete tasks from the list.
+- Switch between list and table views for the todo items.
+- Filter tasks by completion status (All, Completed, Incomplete).
+- Persist todo data using `localStorage` to retain tasks between sessions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Concepts Demonstrated
 
-### `npm test`
+- **useState**: Used to manage state variables, such as the todo list and input field value.
+- **useEffect**: Employed for handling side effects, like saving and retrieving data from `localStorage`.
+- **localStorage**: Utilized to store and retrieve todo data on the client side.
+- **Filtering**: Implemented to filter todo tasks based on completion status.
+- **Bootstrap Components**: Bootstrap is employed for styling the user interface, including buttons, tables, and input fields.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+1. Clone this repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   git clone https://github.com/your-username/todo-table.git
