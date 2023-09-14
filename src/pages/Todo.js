@@ -2,12 +2,14 @@ import React from "react";
 
 export default function Todo() {
   return (
-    <div className="mx-auto col-10">
-      <h1>Todo List</h1>
-      <ul>
+    <div className="mx-auto col-6 d-flex flex-column ">
+      {/* Todo List */}
+      <h1 className="mx-auto">Todo List</h1>
+      <ul className="mx-auto">
         <li>stuff</li>
       </ul>
-      <div class="input-group mb-3 border border-danger">
+      {/* Input */}
+      <div class="input-group mb-3">
         <div class="form-floating">
           <input
             type="text"
@@ -15,10 +17,14 @@ export default function Todo() {
             id="floatingInputGroup1"
             placeholder="Username"
           />
-          <label for="floatingInputGroup1">Username</label>
+          <label for="floatingInputGroup1">Todo Item</label>
         </div>
-        <span class="input-group-text">Submit</span>
+        <button type="button" class="btn btn-outline-primary">
+          Submit
+        </button>
+        {/* <span class="input-group-text">Submit</span> */}
       </div>
+      {/* buttons */}
       <div class="btn-group" role="group" aria-label="Basic example">
         <button type="button" class="btn btn-outline-primary">
           All
