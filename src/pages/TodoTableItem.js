@@ -11,6 +11,7 @@ export default function TodoTableItem({ item, completeTodo, deleteTodo }) {
         />
       </td>
       <td>{item.text}</td>
+      
       <td  className="text-center">
         <button
           onClick={() => deleteTodo(item.id)}
