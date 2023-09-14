@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import TodoList from "./TodoList";
+import TodoTable from "./TodoTable";
 
 export default function Todo() {
   // Initialize todo from local storage or an empty array
-  const [todo, setTodo] = useState(JSON.parse(localStorage.getItem("todo")) || []);
+  const [todo, setTodo] = useState(
+    JSON.parse(localStorage.getItem("todo")) || []
+  );
   const [input, setInput] = useState("");
   const [listType, setListType] = useState("all");
 
@@ -38,17 +41,25 @@ export default function Todo() {
   }
 
   // Filter the todo list based on the selected listType
-  const filteredTodo = listType === "completed"
-    ? todo.filter((item) => item.completed)
-    : listType === "incomplete"
-    ? todo.filter((item) => !item.completed)
-    : todo;
+  const filteredTodo =
+    listType === "completed"
+      ? todo.filter((item) => item.completed)
+      : listType === "incomplete"
+      ? todo.filter((item) => !item.completed)
+      : todo;
 
   return (
     <div className="mx-auto col-6 d-flex flex-column ">
       {/* Todo List */}
       <h1 className="mx-auto">Todo List</h1>
       <TodoList
+        todo={todo}
+        listType={listType}
+        completeTodo={completeTodo}
+        deleteTodo={deleteTodo}
+      />
+      <h1 className="mx-auto">Todo Table</h1>
+      <TodoTable
         todo={todo}
         listType={listType}
         completeTodo={completeTodo}
@@ -70,7 +81,7 @@ export default function Todo() {
         <button
           type="button"
           onClick={addToList}
-          className="btn btn-outline-primary"
+          className="btn btn-outline-dark"
         >
           Submit
         </button>
@@ -93,7 +104,7 @@ export default function Todo() {
         </button>
         <button
           type="button"
-          className="btn btn-outline-warning"
+          className="btn btn-outline-secondary"
           onClick={() => setListType("incomplete")}
         >
           Incomplete

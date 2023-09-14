@@ -9,7 +9,7 @@ export default function TodoItem({ item, completeTodo, deleteTodo }) {
         onChange={() => completeTodo(item.id)}
       />
       {item.text}
-      <button onClick={() => deleteTodo(item.id)}>X</button>
+      <button onClick={() => deleteTodo(item.id)} className="btn btn-danger btn-sm">X</button>
     </li>
   );
 }
