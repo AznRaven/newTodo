@@ -49,15 +49,15 @@ export default function Todo() {
       : todo;
 
   return (
-    <div className="mx-auto col-6 d-flex flex-column ">
+    <div className="mx-auto col-6 d-flex flex-column mt-3">
       {/* Todo List */}
-      <h1 className="mx-auto">Todo List</h1>
+      {/* <h1 className="mx-auto">Todo List</h1>
       <TodoList
         todo={todo}
         listType={listType}
         completeTodo={completeTodo}
         deleteTodo={deleteTodo}
-      />
+      /> */}
       <h1 className="mx-auto">Todo Table</h1>
       <TodoTable
         todo={todo}
@@ -66,7 +66,7 @@ export default function Todo() {
         deleteTodo={deleteTodo}
       />
       {/* Input */}
-      <div className="input-group mb-3">
+      <div className="input-group mb-3 shadow">
         <div className="form-floating">
           <input
             value={input}
@@ -87,7 +87,7 @@ export default function Todo() {
         </button>
       </div>
       {/* Buttons to filter todos */}
-      <div className="btn-group" role="group" aria-label="Basic example">
+      <div className="btn-group shadow" role="group" aria-label="Basic example">
         <button
           type="button"
           className="btn btn-outline-primary"

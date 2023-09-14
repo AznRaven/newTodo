@@ -22,7 +22,7 @@ export default function TodoTable({
     return false;
   });
   return (
-    <table class="table table-dark table-striped table-hover">
+    <table class="table table-dark table-striped table-hover shadow">
       <thead>
         <tr>
           <th scope="col" className="col-2 text-center">Completion</th>
