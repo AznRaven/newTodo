@@ -24,9 +24,11 @@ The "Todo Table" is a simple React application that allows users to manage and d
 - **Bootstrap Components**: Bootstrap is employed for styling the user interface, including buttons, tables, and input fields.
 
 ## Usage
-
+### Option
 1. Clone this repository:
 
    ```bash
    git clone https://github.com/AznRaven/newTodo.git
+
+2. Visit [Render.com](https://todo-table.onrender.com/)
    
