@@ -51,7 +51,7 @@ export default function Todo() {
   return (
     <div className="container center">
       <div className="center row col-12">
-        <div className="center mt-3 col-6 col-sm-12">
+        <div className="center mt-3 col-lg-6 col-md-12 border border-danger">
           {/* Todo List */}
           {/* <h1 className="mx-auto">Todo List</h1>
       <TodoList
@@ -69,7 +69,7 @@ export default function Todo() {
             deleteTodo={deleteTodo}
           />
           {/* Input */}
-          <div className="input-group mb-3 shadow">
+          <div className="input-group mb-3 shadow border border-danger">
             <div className="form-floating">
               <input
                 value={input}
