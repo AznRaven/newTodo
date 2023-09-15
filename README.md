@@ -8,10 +8,9 @@ The "Todo Table" is a simple React application that allows users to manage and d
 
 ## Features
 
-- Add new tasks to the todo list.
+- Add new tasks to the todo table.
 - Mark tasks as completed by checking checkboxes.
 - Delete tasks from the list.
-- Switch between list and table views for the todo items.
 - Filter tasks by completion status (All, Completed, Incomplete).
 - Persist todo data using `localStorage` to retain tasks between sessions.
 
