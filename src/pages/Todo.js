@@ -49,66 +49,80 @@ export default function Todo() {
       : todo;
 
   return (
-    <div className="mx-auto col-6 d-flex flex-column mt-3">
-      {/* Todo List */}
-      {/* <h1 className="mx-auto">Todo List</h1>
+    <div className="container center">
+      <div className="center row col-12">
+        <div className="center mt-3 col-6 col-sm-12">
+          {/* Todo List */}
+          {/* <h1 className="mx-auto">Todo List</h1>
       <TodoList
         todo={todo}
         listType={listType}
         completeTodo={completeTodo}
         deleteTodo={deleteTodo}
       /> */}
-      <h1 className="mx-auto">Todo Table</h1>
-      <TodoTable
-        todo={todo}
-        listType={listType}
-        completeTodo={completeTodo}
-        deleteTodo={deleteTodo}
-      />
-      {/* Input */}
-      <div className="input-group mb-3 shadow">
-        <div className="form-floating">
-          <input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            type="text"
-            className="form-control"
-            id="floatingInputGroup1"
-            placeholder="Todo Item"
+          <h1 className="text-center">Todo Table</h1>
+          {/* Table */}
+          <TodoTable
+            todo={todo}
+            listType={listType}
+            completeTodo={completeTodo}
+            deleteTodo={deleteTodo}
           />
-          <label htmlFor="floatingInputGroup1">Todo Item</label>
+          {/* Input */}
+          <div className="input-group mb-3 shadow">
+            <div className="form-floating">
+              <input
+                value={input}
+                type="text"
+                className="form-control"
+                id="floatingInputGroup1"
+                placeholder="Todo Item"
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    addToList();
+                  }
+                }}
+              />
+              <label htmlFor="floatingInputGroup1">Todo Item</label>
+            </div>
+            <button
+              type="button"
+              onClick={addToList}
+              className="btn btn-outline-dark"
+            >
+              Submit
+            </button>
+          </div>
+          {/* Buttons to filter todos */}
+          <div
+            className="btn-group shadow"
+            role="group"
+            aria-label="Basic example"
+          >
+            <button
+              type="button"
+              className="btn btn-outline-primary"
+              onClick={() => setListType("all")}
+            >
+              All
+            </button>
+            <button
+              type="button"
+              className="btn btn-outline-success"
+              onClick={() => setListType("completed")}
+            >
+              Completed
+            </button>
+            <button
+              type="button"
+              className="btn btn-outline-secondary"
+              onClick={() => setListType("incomplete")}
+            >
+              Incomplete
+            </button>
+          </div>
         </div>
-        <button
-          type="button"
-          onClick={addToList}
-          className="btn btn-outline-dark"
-        >
-          Submit
-        </button>
-      </div>
-      {/* Buttons to filter todos */}
-      <div className="btn-group shadow" role="group" aria-label="Basic example">
-        <button
-          type="button"
-          className="btn btn-outline-primary"
-          onClick={() => setListType("all")}
-        >
-          All
-        </button>
-        <button
-          type="button"
-          className="btn btn-outline-success"
-          onClick={() => setListType("completed")}
-        >
-          Completed
-        </button>
-        <button
-          type="button"
-          className="btn btn-outline-secondary"
-          onClick={() => setListType("incomplete")}
-        >
-          Incomplete
-        </button>
       </div>
     </div>
   );
