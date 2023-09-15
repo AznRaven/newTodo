@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Btn from "../components/Btn";
 import TodoList from "./TodoList";
 import TodoTable from "./TodoTable";
 
@@ -49,9 +50,9 @@ export default function Todo() {
       : todo;
 
   return (
-    <div className="container-fluid center border border-danger">
-      <div className="center row col-12 col-sm-10 col-md-10 border border-warning">
-        <div className="center mt-3 border border-danger">
+    <div className="container-fluid center ">
+      <div className="center row col-12 col-sm-10 col-md-10 ">
+        <div className="center mt-3">
           {/* Todo List */}
           {/* <h1 className="mx-auto">Todo List</h1>
       <TodoList
@@ -100,27 +101,21 @@ export default function Todo() {
             role="group"
             aria-label="Basic example"
           >
-            <button
-              type="button"
-              className="btn btn-outline-primary"
-              onClick={() => setListType("all")}
-            >
-              All
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline-success"
-              onClick={() => setListType("completed")}
-            >
-              Completed
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline-secondary"
-              onClick={() => setListType("incomplete")}
-            >
-              Incomplete
-            </button>
+            <Btn
+              color="primary"
+              text="All"
+              setListType={() => setListType("all")}
+            />
+            <Btn
+              color="success"
+              text="Completed"
+              setListType={() => setListType("completed")}
+            />
+            <Btn
+              color="secondary"
+              text="Incomplete"
+              setListType={() => setListType("incomplete")}
+            />
           </div>
         </div>
       </div>
