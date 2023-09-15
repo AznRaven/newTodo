@@ -49,9 +49,9 @@ export default function Todo() {
       : todo;
 
   return (
-    <div className="container center">
-      <div className="center row col-12">
-        <div className="center mt-3 col-lg-6 col-md-12 ">
+    <div className="container-fluid center border border-danger">
+      <div className="center row col-12 col-sm-10 col-md-10 border border-warning">
+        <div className="center mt-3 border border-danger">
           {/* Todo List */}
           {/* <h1 className="mx-auto">Todo List</h1>
       <TodoList
