@@ -62,6 +62,28 @@ export default function Todo() {
         deleteTodo={deleteTodo}
       /> */}
           <h1 className="text-center">Todo Table</h1>
+          <div
+            className="btn-group shadow"
+            role="group"
+            aria-label="Basic example"
+          >
+            <Btn
+              color="primary"
+              text="All"
+              setListType={() => setListType("all")}
+            />
+            <Btn
+              color="success"
+              text="Completed"
+              setListType={() => setListType("completed")}
+            />
+            <Btn
+              color="secondary"
+              text="Incomplete"
+              setListType={() => setListType("incomplete")}
+            />
+          </div>
+          <br />
           {/* Table */}
           <TodoTable
             todo={todo}
